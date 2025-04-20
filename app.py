@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import smtplib
 from email.mime.text import MIMEText
+import os
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
@@ -207,5 +208,6 @@ def delete_item():
 
     return redirect(url_for("admin"))
 
-if __name__=="__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    port = int(os.getenv('PORT', 5000))  # Use Render's assigned port or default to 5000
+    app.run(host='0.0.0.0', port=port)
