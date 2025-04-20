@@ -1,0 +1,58 @@
+Colgate Toothpaste,50,10.0
+Sensodine Toothbrush,25,15.0
+Clinic Plus Shampoo,25,60.0
+Lifebuoy Soap,40,20.0
+Parachute Hair Oil,15,35.0
+Dettol Handwash,30,40.0
+Himalaya Face Wash,20,50.0
+Vaseline Body Lotion,18,70.0
+Surf Excel Detergent Powder,35,30.0
+Rin Washing Soap,50,15.0
+Vim Dishwash Bar,45,12.0
+Surf Excel Dishwash Liquid,25,35.0
+Lizol Floor Cleaner,20,80.0
+Domex Phenyl,22,50.0
+Odonil Room Freshener,15,55.0
+Harpic Toilet Cleaner,18,65.0
+Milton Bucket,10,120.0
+Cello Mug,25,25.0
+Gala Broom,15,50.0
+Scotch-Brite Wiper,20,45.0
+Spotzero Mop,12,90.0
+Origami Toilet Paper,30,20.0
+Premier Tissue Box,20,30.0
+Vega Nail Cutter,15,25.0
+Kent Comb,20,15.0
+Local Hair Band,20,10.0
+Bella Cotton,30,8.0
+Homelite Matchbox,50,2.0
+Standard Candle,40,5.0
+GoodKnight Mosquito Coil,30,10.0
+All Out Mosquito Spray,18,85.0
+Kurkure Snacks Packet,60,10.0
+Parle-G Biscuits,70,5.0
+Lays Chips,50,10.0
+Haldiram Namkeen,40,15.0
+Pepsi Cold Drink,30,35.0
+Coca cola,30,40.0
+Real Juice Box,25,20.0
+Amul Milk Packet,40,25.0
+Modern Bread,35,20.0
+Farm Fresh Eggs (6 pack),20,40.0
+Madhur Sugar (1kg),25,50.0
+Tata Salt (1kg),30,20.0
+India Gate Rice (1kg),20,60.0
+Aashirvaad Wheat Flour (1kg),18,55.0
+Tata Tea (250g),22,70.0
+Nescafe Coffee (100g),15,80.0
+Everest Tamarind,10,30.0
+Patanjali Turmeric Powder,20,20.0
+MDH Red Chilli Powder,15,25.0
+Catch Coriander Powder,14,25.0
+Everest Garam Masala,12,35.0
+Classmate Stationery Set,10,40.0
+Reynolds Pens,50,5.0
+Classmate Notebooks,30,25.0
+Camlin Ruler,20,10.0
+Natraj Eraser,40,3.0
+Apsara Pencil,45,5.0

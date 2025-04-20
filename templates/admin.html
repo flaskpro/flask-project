@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel - {{ shop_name }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>⚙️ Admin Panel</h1>
+        <p>Manage Stock & Prices of {{ shop_name }}</p>
+    </header>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <p class="{{ category }}">{{ message }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <div class="items">
+        <!-- Form to Add a New Item -->
+        <div class="card add-item">
+            <h2>➕ Add New Item</h2>
+            <form action="/add_item" method="POST">
+                <input type="text" name="item_name" placeholder="Item Name" required><br>
+                <input type="number" name="stock" placeholder="Stock" min="0" required><br>
+                <input type="number" name="price" placeholder="Price (₹)" min="1" required><br>
+                <button type="submit">Add Item</button>
+            </form>
+        </div>
+
+        <!-- Display Existing Items -->
+        {% for item in shop_items %}
+        <div class="card">
+            <h2>{{ item.name }}</h2>
+            <p>Stock: {{ item.stock }}</p>
+            <p>Price: ₹{{ item.price }}</p>
+            <form method="POST" action="/update_item">
+                <input type="hidden" name="item_name" value="{{ item.name }}">
+                <input type="number" name="new_stock" placeholder="New Stock" min="0" required>
+                <input type="number" name="new_price" placeholder="New Price (₹)" min="1" required>
+                <button type="submit">Update</button>
+            </form>
+            
+            <form method="POST" action="/delete_item" onsubmit="return confirm('Are you sure you want to delete {{ item.name }}?');">
+                <input type="hidden" name="item_name" value="{{ item.name }}">
+                <button type="submit" class="delete-btn">🗑️ Delete</button>
+            </form>
+            
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <a href="/">🏠 Back to Home</a>
+    </footer>
+</body>
+</html>

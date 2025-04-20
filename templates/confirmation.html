@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Confirmed</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>✅ Order Confirmed!</h1>
+    </header>
+
+    <p><center>You have successfully ordered <strong>{{ quantity }}</strong> x <strong>{{ item }}</strong>.</center></p>
+    <p><center>Your order will come soon.</center></p>
+    <footer>
+        <a href="/">🏠Back to home</a>
+    </footer>
+</body>
+</html>

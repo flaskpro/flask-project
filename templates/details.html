@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Delivery Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>📦 Delivery Details</h1>
+        <p>Please enter your info to complete the order.</p>
+    </header>
+
+    <div class="login-box">
+        <form method="POST" action="/details">
+            <input type="hidden" name="item" value="{{ item }}">
+            <input type="hidden" name="quantity" value="{{ quantity }}">
+            <input type="text" name="name" placeholder="Full Name" required><br>
+            <input type="text" name="phone" placeholder="Phone Number" required><br>
+            <input type="text" name="house" placeholder="House Number" required><br>
+            <input type="text" name="location" placeholder="Floor etc" required><br>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>

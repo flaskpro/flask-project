@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ shop_name }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+</head>
+<body>
+    <header>
+        <h1>🛒{{ shop_name }}</h1>
+        <p>🍔 Available Food & General Store Items</p>
+    </header>
+
+    <div class="items">
+        {% for item in shop_items %}
+        <div class="card {% if item.stock == 0 %}out-of-stock{% endif %}">
+            <h2>{{ item.name }}</h2>
+            <p>Stock: {{ item.stock }}</p>
+            <p>Price: ₹{{ item.price }}</p>
+            {% if item.stock > 0 %}
+            <form action="/confirm" method="POST">
+                <input type="hidden" name="item_name" value="{{ item.name }}">
+                <input type="number" name="quantity" min="1" max="{{ item.stock }}" required>
+                <button type="submit">Order</button>
+            </form>
+            {% else %}
+            <p class="out-text">❌ Out of Stock</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <a href="/login">🔑 Admin Login</a>
+    </footer>
+</body>
+</html>
