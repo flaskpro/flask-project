@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ shop_name }}</title>
+    <meta name="description" content="Order groceries, food, and general store items easily from Aarav's General Shop. Shop now!">
+    <meta name="keywords" content="Aarav, General Shop, Grocery, Food, Store, Online Shopping, Order, Items">
+    <meta name="author" content="Aarav">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aaravgeneralshop.onrender.com/">
+    
+    <!-- For social sharing (Open Graph) -->
+    <meta property="og:title" content="Aarav's General Shop">
+    <meta property="og:description" content="Fast and easy ordering of food and general store items online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aaravgeneralshop.onrender.com/">
+    <meta property="og:image" content="{{ url_for('static', filename='favicon.png', _external=True) }}">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
-
 </head>
 <body>
     <header>
