@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import smtplib
 from email.mime.text import MIMEText
+from flask import send_from_directory
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
@@ -214,6 +216,11 @@ def robots():
 @app.route('/sitemap.xml')
 def sitemap():
     return send_from_directory('static', 'sitemap.xml')
+
+@app.route('/google644d7cbb4a4a3535.html')
+def google_verify():
+    return send_from_directory('static', 'google644d7cbb4a4a3535.html')
+
 
 if __name__=="__main__":
     app.run(debug=True)
