@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aaravgeneralshop.onrender.com/sitemap.xml
